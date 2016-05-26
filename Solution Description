@@ -1,0 +1,21 @@
+Solution:
+=========
+I have provided the solution implementation below.
+Brief summary of solution:
+I have used 3 different methods to remove duplicate elements. They are using List, Set and LinkedHashSet approach.
+1.	List approach removes duplicate elements and retains the order of elements of the input.
+2.	Set approach removes duplicates, but the order of elements is not guaranteed with respect to the order of input elements.
+3.	With LinkedHashSet approach, we can remove the duplicate elements and retain the order of input elements.
+Even though all the 3 methods remove duplicate elements, List approach is preferred as there is no overhead of hash calculation compared to Set/LinkedHashSet approach. Set/LinkedHashSet approach internally uses the Map implementation. 
+To retain the original order we can use either List/LinkedHashSet approach.
+Positives:
+=========
+With List approach we can remove duplicate elements and retain order and efficient compared to other 2 approaches.
+With Set approach we can only remove duplicates and cannot retain the order of elements.
+With LinkedHashSet approach we can remove duplicates and maintain the original order.
+Negatives:
+=========
+Since Set/LinkedHashSet internally uses Map, there is overhead associated of finding hash of each object. With List approach we can sequentially add elements as we not deleting and we are not inserting any elements in between.
+Recommendation
+==============
+Using List approach is the best among the 3 methods provided below. List does not have additional overhead as we are not deleting elements. Since we are adding elements at the end of the index for list, it is good to use List approach from performance perspective.
